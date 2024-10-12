@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login_page.css">
+</head>
+<body> 
+  <!-- Custom Left Arrow Button -->
+  <div class="left-arrow" onclick="window.location.href='main_page.html';">
+    <span>Back to Home Page</span> 
+  </div>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Username or Email</label>
+      <input type="text" id="login-username" required placeholder="Enter your username or email">
+
+      <label for="password">Password</label>
+      <input type="password" id="login-password" required placeholder="Enter your password">
+
+      <button type="submit" class="login-btn">Login</button>
+
+      <!-- Success message will be inserted here -->
+      <p id="success-message" class="hidden">Login successful! Redirecting to the home page...</p> 
+      <!-- Error message will be inserted here -->
+      <p id="error-message" class="hidden" style="color: red;">Invalid Username/Email or Password</p> <!-- Error message in red -->
+    </form>
+    <p>Don't have an account? <a href="signup_page.html">Sign up here</a></p>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const enteredUsername = document.getElementById('login-username').value;
+      const enteredPassword = document.getElementById('login-password').value;
+
+      // Retrieve stored credentials
+      const storedUsername = localStorage.getItem('username');
+      const storedPassword = localStorage.getItem('password');
+
+      const successMessageContainer = document.getElementById('success-message'); // Get the success message container
+      const errorMessageContainer = document.getElementById('error-message'); // Get the error message container
+
+      // Clear any previous messages
+      successMessageContainer.classList.add('hidden'); // Hide success message
+      errorMessageContainer.classList.add('hidden'); // Hide error message
+
+      if ((enteredUsername === storedUsername || enteredUsername === localStorage.getItem('email')) && enteredPassword === storedPassword) {
+        // Successful login 
+        // Set a flag in localStorage to mark the user as logged in
+        localStorage.setItem('isLoggedIn', 'true');  // Add this line to mark the user as logged in  
+        localStorage.setItem('username', storedUsername);  // Store the username to use in the welcome box
+
+        successMessageContainer.textContent = 'Login successful! Redirecting...'; // Update success message
+        successMessageContainer.classList.remove('hidden'); // Show success message
+
+        // Redirect to main page after 2 seconds 
+        setTimeout(function() {
+          window.location.href = 'main_page.html'; 
+        }, 2000); // 2-second delay
+      } else {
+        errorMessageContainer.classList.remove('hidden'); // Show error message
+      }
+    });
+  </script> 
+</body> 
+</html> 
