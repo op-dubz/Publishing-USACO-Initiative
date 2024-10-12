@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- IMPORTANT FOR THE BLACK BACKGROUND ABOVE -->
+  <title>Main Page</title>
+  <link rel="stylesheet" href = "course_info.css"> 
+</head>
+<body>
+  <div class="top-bar">
+    <!-- <div class="image-container">
+      
+    </div> --> 
+    <div class="left-buttons"> 
+      <!-- USACO Initiative Main Transparent Logo.png Screenshot 2024-10-09 at 3.09.53 PM.png -->
+      <img src = "USACO Initiative Main Transparent Logo.jpg" alt="Icon" class="icon">
+      <button class="button" onclick="window.location.href='index.html';">Home</button> <!-- Home -->
+      <button class="button" onclick="window.location.href='course_info.html';">Course Information</button> <!-- Course Information -->
+      <button class="button" onclick="window.location.href='course_sessions.html';">Sign Up</button> <!-- Course Sessions -->
+    </div> 
+    <div class="right-buttons"> 
+      <!-- <button class="button" id="login-btn" onclick="window.location.href='login_page.html';">Login</button>  -->
+      <!-- <button class="button" id="signup-btn" onclick = "window.location.href='signup_page.html';">Sign Up</button> Sign Up  -->
+      <!-- "Logout" button will be added dynamically here if the user is logged in -->
+    </div>
+  </div> 
+
+  <!-- Blue box to welcome the user -->
+  <div id="welcome-box" class="blue-box hidden">
+    Welcome <span id="username-display"></span>!
+  </div> 
+
+  <!-- <button onclick="resetDatabase()">Reset User Data</button>  -->  <!-- To reset every username/email/password in the database-->
+  
+  <!-- Two-column layout -->
+  <div class="content">
+    <div class="course-info-section">
+      <h1>Course Information</h1>
+      <p id="intro-message"> 
+        We have one <span class="blue">FREE</span> course: the <span class = "bronze">Bronze</span> class; it is <span class = "blue">13</span> sessions long. The <span class = "bronze">Bronze</span> class focuses on preparing students to pass the <span class = "blue">USACO</span> <span class = "bronze">Bronze</span> Contest. We created the course such that after student takes the <span class = "bronze">Bronze</span> course, they are well prepared to pass the <span class="blue">USACO</span> <span class = "bronze">Bronze</span> Contest. Students should be familiar with the basics of either <span class="green">C/C++</span>, <span class="green">Python3</span>, or <span class="green">Java</span> before taking the course since <span class="blue">USACO</span> only allows solutions using those programming languages.<br><br> 
+        In almost every class session, the instructors will <span class="blue">teach</span> new content and concepts and then show how to solve practice problems related to the content taught. In addition, between classes, students will have <span class="blue">homework</span> problems to complete. These classes are <span class = "red">hard</span> for a reason: we created them to allow students to succeed in the <span class = "blue">USACO</span> contests. Do not be discouraged if you do not understand some concepts or cannot solve a couple of problems. Remember, <span class="green">practice makes perfect!</span><br><br>
+        The <span class = "bronze">Bronze</span> class is for students who have already mastered the "<span class="blue">basics</span>." For example, if a student has completed <span class="blue">AP Computer Science A</span>, they are well prepared for this class. However, the instructors will still dedicate one session to learning the prerequisites. <br><br> 
+        Students will be provided with a <span class="green">C++</span> solution to every problem solved in class and in the homework whether the solution is from the instructors or from <span class = "blue">USACO</span>. However, only the <span class = "bronze">Bronze</span> Class may also have <span class = "green">Python3</span> solutions. This is because <span class="green">C++</span> is considered the best programming language in the competitive programming field. Thus, <span class="blue">USACO</span> makes the use of the language a necessity in higher divisons, which is why we highly recommend students to start or continue using <span class="green">C++</span>. Even if a student does not know <span class="green">C++</span>, they should learn the basics of <span class="green">C++</span> outside of the classes, so they succeed in our courses and in the <span class="blue">USACO</span> contests. However, if they don't want to learn <span class="green">C++</span>, they can use <span class="blue">AI</span>, like <span class = "blue">ChatGPT</span>, to convert our <span class="green">C++</span> solutions to whatever programming language they use.<br><br> 
+        Most of the problems will be from the <a href="https://www.usaco.org/" target="_blank">USACO website</a> or <a href="https://codeforces.com/" target="_blank">Codeforces</a>. <br><br> 
+        Next year, we will also have a <span class="silver">Silver</span> course. It would be much <span class="blue">more advanced</span> than the <span class = "bronze">Bronze</span> class, recommended only for students who have passed the <span class = "bronze">Bronze</span> division or are getting scores higher than <span class="blue">800</span> on the <span class = "bronze">Bronze</span> Contests. Stay tuned for that!<br> <br>
+      </p> 
+
+      <div class="sign-up-section">
+        <h2>How to sign up?</h2> <!-- New Heading -->
+        <p class="sign-up-message"> 
+          Just complete this <a href="https://forms.gle/x1GUdgvHsMGyXp6c9" target="_blank">Google Form</a> or go to our <a href='course_sessions.html'>Sign Up</a> page, and a Google Classroom code will be sent to your email where we will put content, resources, and homework. 
+        </p>
+      </div>
+      
+    </div>
+    
+    <div class="schedules-section">
+    <h1>Schedule</h1> <!-- Heading 1 -->
+    <!-- >p id = "sched-message">Since we do not expect students to take both the <span class = "bronze">Bronze</span> and <span class="silver">Silver</span> classes at the same time, the times and dates for both classes are the <span class="blue">exact</span> same.</p>-->
+      <table> 
+        <thead>
+          <tr>
+            <th>Session #</th>
+            <th>Date (Month/Day/Year)</th>
+            <th>Time</th>
+            <th>Bronze Content Covered</th> 
+            
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr>
+            <td>Session 1</td>
+            <td>11/5/2024</td>
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Introduction to Competitive Programming, Variables, Conditionals</td>
+            
+          </tr>
+          <tr>
+            <td>Session 2</td>
+            <td>11/12/2024</td>
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Loops, Strings, Big O Notation</td>
+            
+          </tr>
+          <tr>
+            <td>Session 3</td>
+            <td>11/19/2024</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Lists, Arrays, Matrices</td>
+            
+          </tr>
+          <tr>
+            <td>Session 4</td>
+            <td>12/3/2024</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Reading/Writing Files to the USACO platform, Complete Search</td>
+            
+          </tr>
+          <tr>
+            <td>Session 5</td>
+            <td>12/17/2024</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Simulation Problems</td> 
+            
+          </tr>
+          <tr>
+            <td>Session 6</td>
+            <td>1/7/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Custom Sorting</td> 
+            
+          </tr>
+          <tr>
+            <td>Session 7</td>
+            <td>1/21/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Searching and Sorting Problems</td> 
+            
+          </tr>
+          <tr>
+            <td>Session 8</td>
+            <td>2/4/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Binary Search</td>
+            
+          </tr>
+          <tr>
+            <td>Session 9</td>
+            <td>2/18/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Graph Problems</td>
+            
+          </tr>
+          <tr>
+            <td>Session 10</td>
+            <td>3/4/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Data Structures: ordered and unordered maps/hashmaps/dictionaries, ordered and unordered sets</td>
+            
+          </tr>
+          <tr>
+            <td>Session 11</td>
+            <td>3/18/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Introducton to Greedy Algorithms</td> 
+            
+          </tr>
+          <tr>
+            <td>Session 12</td> 
+            <td>4/1/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Mixed Problems (any type of problem)</td>
+            
+          </tr>
+          <tr>
+            <td>Session 13</td> 
+            <td>4/15/2025</td> 
+            <td>5:15 PM - 6:45 PM (PDT/PST)</td>
+            <td>Adhoc Problems and USACO Contests Strategies</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div> 
+
+
+  <script> // change to javascript  
+    // Function to reset database (optional) 
+    function resetDatabase() {
+      localStorage.clear();
+    }
+    console.log("Is Logged In?", localStorage.getItem('isLoggedIn'));
+    // Check if user is logged in
+    // Check if the user is logged in by checking a flag stored in localStorage
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      const username = localStorage.getItem('username'); // Retrieve the stored username
+      document.getElementById('username-display').textContent = username; // Display the username
+      
+      // Make the blue welcome box visible
+      const welcomeBox = document.getElementById('welcome-box');
+      welcomeBox.classList.remove('hidden'); 
+      
+      // Hide the "Login" and "Sign Up" buttons
+      document.getElementById('login-btn').style.display = 'none';
+      document.getElementById('signup-btn').style.display = 'none';
+
+      // Create "Logout" button dynamically
+      const rightButtons = document.querySelector('.right-buttons');
+      const logoutButton = document.createElement('button');
+      logoutButton.textContent = 'Logout'; // Set the button text 
+      logoutButton.classList.add('button'); // Apply the same button styles
+      
+      // Define the behavior when the "Logout" button is clicked
+      logoutButton.onclick = function() {
+        localStorage.setItem('isLoggedIn', 'false'); // Mark user as logged out by updating localStorage
+        window.location.reload(); // // Refresh the page to reflect the logout (Login/Sign Up buttons should appear again)
+      }; 
+      rightButtons.appendChild(logoutButton); // Append the "Logout" button to the right button group 
+    } 
+    else { 
+      document.getElementById('welcome-box').classList.add('hidden'); // Ensure the blue box remains hidden when not logged in  
+    }
+  </script>
+</body>
+</html>
