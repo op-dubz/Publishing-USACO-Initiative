@@ -3,72 +3,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- IMPORTANT FOR THE BLACK BACKGROUND ABOVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page</title>
-  <link rel="stylesheet" href="main_page.css"> 
+  <link rel="stylesheet" href="main_page.css">
+  <script defer src = "app.js"></script>
 </head>
 <body>
   <div class="top-bar">
-    <!-- <div class="image-container">
-      
-    </div> --> 
-    <div class="left-buttons"> 
-      <!-- USACO Initiative Main Transparent Logo.png Screenshot 2024-10-09 at 3.09.53 PM.png -->
-      <img src = "USACO Initiative Main Transparent Logo.jpg" alt="Icon" class="icon">
-      <button class="button" onclick="window.location.href='index.html';">Home</button> <!-- Home -->
-      <button class="button" onclick="window.location.href='course_info.html';">Course Information</button> <!-- Course Information -->
-      <button class="button" onclick="window.location.href='course_sessions.html';">Sign Up</button> <!-- Course Sessions -->
-    </div> 
+    <img src="USACO Initiative Main Transparent Logo.png" alt="Icon" class="icon">
     <div class="right-buttons">
-      <!-- <button class="button" id="login-btn" onclick="window.location.href='login_page.html';">Login</button>  -->
-      <!-- <button class="button" id="signup-btn" onclick = "window.location.href='signup_page.html';">Sign Up</button> Sign Up  -->
-      <!-- "Logout" button will be added dynamically here if the user is logged in -->
-    </div> 
-  </div> 
+      <button class="button" onclick="window.location.href='index.html';">Home</button>
+      <button class="button" onclick="window.location.href='course_info.html';">Course Information</button>
+      <button class="button" onclick="window.location.href='course_sessions.html';">Sign Up</button>
+    </div>
+  </div>
+  <div class="logo-section">
+    <div class="logo">
+      <img src="USACO Initiative Main Transparent Logo.png" alt="logo">
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <img src="learn.png" alt="Image 1">
+      <h3>Learn Competitive Coding</h3>
+      <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSckHDTPayfSptR4b-6amiWqSUm16Vw96jrAyewgnmJNRIdw6g/viewform'">Explore</button>
+    </div>
+    <div class="box">
+      <img src="USACO.png" alt="Image 2">
+      <h3>Pass USACO Contests</h3>
+      <button onclick="window.location.href='course_info.html'">Learn More</button>
+    </div>
+    <div class="box">
+      <img src="Instructor.png" alt="Image 3">
+      <h3>Become an Officer/Instructor</h3>
+      <button onclick="window.location.href='https://forms.gle/tZVYqfxxhKM6Xhhm7';">Get Started</button>
+    </div>
+  </div>
 
-  <!-- Blue box to welcome the user -->
-  <div id="welcome-box" class="blue-box hidden">
-    Welcome <span id="username-display"></span>!
-  </div> 
-
-  <!-- <button onclick="resetDatabase()">Reset User Data</button>  To reset every username/email/password in the database -->
-
-  <script> // change to javascript  
-    // Function to reset database (optional) 
-    function resetDatabase() {
-      localStorage.clear(); 
-    }
-    console.log("Is Logged In?", localStorage.getItem('isLoggedIn'));
-    // Check if user is logged in
-    // Check if the user is logged in by checking a flag stored in localStorage
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-      const username = localStorage.getItem('username'); // Retrieve the stored username
-      document.getElementById('username-display').textContent = username; // Display the username
-      
-      // Make the blue welcome box visible
-      const welcomeBox = document.getElementById('welcome-box');
-      welcomeBox.classList.remove('hidden'); 
-      
-      // Hide the "Login" and "Sign Up" buttons
-      document.getElementById('login-btn').style.display = 'none';
-      document.getElementById('signup-btn').style.display = 'none';
-
-      // Create "Logout" button dynamically
-      const rightButtons = document.querySelector('.right-buttons');
-      const logoutButton = document.createElement('button');
-      logoutButton.textContent = 'Logout'; // Set the button text 
-      logoutButton.classList.add('button'); // Apply the same button styles
-      
-      // Define the behavior when the "Logout" button is clicked
-      logoutButton.onclick = function() {
-        localStorage.setItem('isLoggedIn', 'false'); // Mark user as logged out by updating localStorage
-        window.location.reload(); // // Refresh the page to reflect the logout (Login/Sign Up buttons should appear again)
-      }; 
-      rightButtons.appendChild(logoutButton); // Append the "Logout" button to the right button group 
-    } 
-    else { 
-      document.getElementById('welcome-box').classList.add('hidden'); // Ensure the blue box remains hidden when not logged in  
-    }
-  </script>
+  <div class="container2">
+    <div class="left-column">
+        <img src="Ai_Image.png" alt="TopLeftImage" width="100px" class = "topLeftImage">
+        <h5>Interested?</h5>
+        <p> We offer<span class = "blue"> free </span> classes from <span class = "red"> 5:15 - 6:45</span> on 13 Tuesdays, from <span class = "red">November 5th </span> to <span class = "red"> April 1st</span>, 
+          and we will be going over fundamental competitive coding techniques. With these techniques, our students should be able to get past <span class = "blue"> USACO </span> <span class = "bronze">Bronze</span>, and well into <span class = "blue"> USACO </span> <span class = "silver">Silver</span>. 
+          This can be a real <span class = "green"> boost </span> in your college applications. Not only that, these techniques and lessons are <span class = "green">fundamental</span> to the career of a programmer, 
+          especially when one is interviewing for jobs in tech companies such as <span class = "red">Google </span> and <span class = "red"> Microsoft</span>. If you want to see what we will teach, go to our<a href = "course_info.html"> Course Information page</a>.  If you are interested in being introduced to competitive programming, fill out this<a href = 'https://docs.google.com/forms/d/e/1FAIpQLSckHDTPayfSptR4b-6amiWqSUm16Vw96jrAyewgnmJNRIdw6g/viewform'> Google Form </a>and a Google Classroom code should be sent to your email.</p>
+    </div>
+    <div class="right-column">
+       <Center><h1>Who Are We?</h1></Center> 
+        <p class = "Who" alt = "second-text">We are a group of high schoolers, situated in the Bay Area, 
+          <span class = "green">determined</span> to introduce competitive programming to <span class = "red"> middle schoolers</span> and <span class = "red"> high schoolers</span>. Our main goal is to <span class = "green"> help students</span>
+           pass the divisions of the United States of America Computing Olympiad (USACO). There are <span class = "blue"> 4 divisions</span> to it. However, the first division is already very difficult to pass because it is around <span class = "blue"> 5 times harder </span>than <span class ="red"> AP Computer Science A</span>. 
+           For this reason, we offer a course called “<span class = "blue">USACO</span><span class = "bronze"> Bronze</span>”, which will <span class = "green"> teach</span> students everything they need to know to pass the first division and well into the next division—the <span class = "silver"> Silver</span> division. <span class = "blue"> USACO</span>
+           is a <span class = "green"> great olympiad</span> to put on <span class = "red"> college applications</span>. Our course not only <span class = "green">prepares</span> them for the first division entirely and thereby introducing them to competitive programming (where an individual is given a programming problem to solve in a given amount of time), but also <span class = "green"> prepares</span> them very <span class = "green"> well</span> for programming interviews at companies later on in their life. This highlights the need to learn competitive programming. 
+        </p>
+        <img src = "Logo.png" class = "Logo">
+    </div>
+</div>
+<div class="container3">
+  <h1 class = "title" alt = "interest">Reaching the International Olympiad in 3 easy steps:</h1>
+  <div class="header">
+      <div class="header-text">
+      </div>
+      <div class="header-image">
+          <img src="Coding.png" alt="Student coding" width = "250px" class = "interest">
+      </div>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <h2>1</h2>
+      <p>Sign Up for our classes</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
+      <h2>2</h2>
+      <p>Attend the sessions and learn</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
+      <h2>3</h2>
+      <p>Participate in the USACO contests</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="step">
+      <h2>4</h2>
+      <p>Reaching the TOP</p>
+    </div>
+  </div>
+</div>
+<h4> The Team</h4>
+<div class = "container">
+  <div class = "box hidden">
+    <img src = "Gurchit-crop.jpg" alt = "gucci">
+  <center> <h3>Gurchit Singh <br> President/Founder</h3></center> 
+  </div>
+  <div class = "box hidden">
+    <img src = "Dalbert.jpg" alt = "dalbert">
+    <center> <h3>  Dalbert Wu <br> Vice President/ <br>Co-Founder</h3></center> 
+  </div>
+  <div class = "box hidden">
+    <img src = "Yash.jpg" alt = "yash">
+  <center> <h3>Yash Balaji Instructor/Co-Founder</h3> </center>
+  </div>
+  <div class = "box hidden">
+    <img src = "Krrish2.jpg" alt ="krrish">
+  <center>  <h3>Krrish Jadwani Instructor/Co-Founder</h3> </center>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="text-section">
+      <h2>Contact Us!</h2>
+      <p>Feel free to reach out to us at <a href="mailto:usacoinitiative@gmail.com">usacoinitiative@gmail.com</a></p>
+      <h2 class = "join">Join Us!</h2>
+      <p>Want to help teach and introduce competitive programming?</p>
+      <p>Apply using this <a href = 'https://forms.gle/tZVYqfxxhKM6Xhhm7'>google form</a></p>
+      <p>We are only accepting officers for the 2025-2026 school year and onward.</p>
+  </div>
+  <div class="image-section">
+          <img src = "Contact.png" alt = "contact" class = "email">
+  </div>
+</div>
 </body>
 </html>
+
