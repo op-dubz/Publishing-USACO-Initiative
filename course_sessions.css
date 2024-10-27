@@ -18,9 +18,12 @@
     justify-content: space-between; /* Align buttons to the right */
     padding: 0 20px; /* Add some padding for spacing */
   }  
-  .left-buttons, .right-buttons {
-    display: flex; 
-  } 
+  .right-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px; /* Space between the buttons */
+  }
   .icon {
     width: 180px; /* Scale the image down */
     height: auto; /* Maintain aspect ratio */
