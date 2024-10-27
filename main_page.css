@@ -17,11 +17,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 20px; 
 }
 
 .icon {
-  width: 150px; /* Reduced size */
+  width: 180px; /* Reduced size */
   height: auto;
 }
 
@@ -76,7 +76,9 @@ body {
   bottom: 60px;
   font-size: 1.3em;
 }
-
+.left-buttons, .right-buttons {
+  display: flex; 
+} 
 .box button {
   background-color: #007bff;
   color: white;
