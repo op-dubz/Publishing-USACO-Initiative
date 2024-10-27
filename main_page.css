@@ -356,3 +356,39 @@ h5{
 .red {
   color: #a62121; 
 }
+
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .left-buttons, .right-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%; /* Full width */
+    text-align: center;
+  }
+
+  .icon {
+    width: 40px; /* Smaller icon for mobile */
+  }
+
+  /* Adjust button spacing */
+  .button {
+    margin: 5px 0; /* More space between buttons on mobile */
+  }
+
+  /* Logo and Heading Size Adjustments */
+  .courses-section h1 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+  }
+
+  /* Course buttons */
+  .course-btn {
+    font-size: 1rem;
+    padding: 10px;
+    width: 90%; /* Adjust button width */
+    margin: 10px auto;
+  }
+}
