@@ -12,12 +12,12 @@ body {
 
 .top-bar {
   background-color: #8db5f0;
-  height: 80px;
+  height: 8vw; /* 80px approximated as 8% of viewport width */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px; 
+  padding: 2vw; /* 20px approximated as 2% of viewport width */
 }
 
 .icon {
