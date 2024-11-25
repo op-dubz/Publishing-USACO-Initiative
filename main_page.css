@@ -512,6 +512,13 @@ h5{
 
   }
 
+  .container-select {
+  z-index: 1;
+}
+
+.box-select {
+  z-index: 2;
+}
 
   .steps {
 
