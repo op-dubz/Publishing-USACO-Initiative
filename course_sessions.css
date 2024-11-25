@@ -60,7 +60,7 @@
     background-color: rgb(72, 125, 231);
   }
   body, html {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    /*overflow-x: hidden; Prevent horizontal scrolling */
   }
   .hidden {
     display: none;
