@@ -173,3 +173,131 @@ th:nth-child(2), /* Select the 'Date' header */
 td:nth-child(2) { /* Select all 'Date' cells */
   padding-right: 30px; /* Increase padding on the right */
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .content {
+
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: -1px;
+  }
+
+  .course-info-section,
+  .schedules-section,
+  .sign-up-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin: 1px;
+  }
+
+  .course-info-section h1 {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .schedules-section h1 {
+    position: relative;
+    top: 10px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .sign-up-section h2 {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .sign-up-message {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.2em;
+    width: 100%;
+
+  }
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .content {
+
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: -1px;
+  }
+
+  .course-info-section,
+  .schedules-section,
+  .sign-up-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin: 1px;
+  }
+
+  .course-info-section h1 {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .schedules-section h1 {
+    position: relative;
+    top: 10px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .sign-up-section h2 {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.5em;
+    width: 100%;
+
+  }
+
+  .sign-up-message {
+    position: relative;
+    top: 0.1px;
+    bottom: 60px;
+    font-size: 1.2em;
+    width: 100%;
+
+  }
+
+
+}
